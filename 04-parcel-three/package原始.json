@@ -1,0 +1,16 @@
+{
+  "name": "04-parcel-three",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build  src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "three": "^0.167.1"
+  }
+}

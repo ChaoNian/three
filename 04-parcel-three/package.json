@@ -1,0 +1,20 @@
+{
+  "name": "04-parcel-three",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build  src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dat.gui": "^0.7.9",
+    "gsap": "^3.12.5",
+    "three": "^0.167.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
