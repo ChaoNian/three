@@ -1,4 +1,8 @@
 import * as THREE from "three";
+// 导入轨道控制器
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
+// 目标： 使用控制器查看3d物体
 
 // 1---、创建场景
 const scene = new THREE.Scene()
@@ -39,9 +43,19 @@ scene.add(cube)
 const renderer = new THREE.WebGLRenderer
 // 4.1 设置渲染器尺寸
 renderer.setSize(window.innerWidth, window.innerHeight)
-console.log(renderer);
 // 4.2 将webgl渲染的canvas内容添加到body,  domElement属性是canvas DOM
-document.body.appendChild(renderer.domElement)
+const canvas = renderer.domElement
+document.body.appendChild(canvas)
 
-// 5--- 使用渲染器， 通过相机将场景渲染进来
-renderer.render(scene, camera)
+// // 5--- 使用渲染器， 通过相机将场景渲染进来
+// renderer.render(scene, camera)
+
+
+// 6-- 创建轨道控制器
+const controls = new OrbitControls(camera, canvas)
+function render() {
+    // 5--- 使用渲染器， 通过相机将场景渲染进来
+    renderer.render(scene, camera)
+    requestAnimationFrame(render)
+}
+render()
